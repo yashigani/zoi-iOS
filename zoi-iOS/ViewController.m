@@ -18,7 +18,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSURLRequest *req = [NSURLRequest requestWithURL:[NSURL URLWithString:@"https://zoi.herokuapp.com"]];
+    NSURLRequest *req = [NSURLRequest requestWithURL:self.zoiURL];
     [self.webView loadRequest:req];
 }
 
@@ -33,6 +33,11 @@
     [self tweet:[NSURL URLWithString:href]];
 }
 
+- (NSURL *)zoiURL
+{
+    return [NSURL URLWithString:@"http://zoi.herokuapp.com"];
+}
+
 - (void)tweet:(NSURL *)tweetURL
 {
     NSMutableDictionary *query = NSMutableDictionary.dictionary;
@@ -43,7 +48,9 @@
     SLComposeViewController *vc = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
     NSString *pic = [@"https://" stringByAppendingString:query[@"text"]];
     [vc addURL:[NSURL URLWithString:[pic substringToIndex:pic.length - 4]]];
-    vc.initialText = [@"#" stringByAppendingString:query[@"hashtags"]];
+    [vc addURL:self.zoiURL];
+    NSString *hashtag = [@"#" stringByAppendingString:query[@"hashtags"]];
+    vc.initialText = [@"http://zoi.herokuapp.com " stringByAppendingString:hashtag];
     [self presentViewController:vc animated:YES completion:nil];
 }
 
