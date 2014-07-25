@@ -55,7 +55,13 @@
         [self tweet:request.URL];
         return NO;
     }
+    self.navigationItem.leftBarButtonItem.enabled = NO;
     return YES;
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    self.navigationItem.leftBarButtonItem.enabled = YES;
 }
 
 @end
