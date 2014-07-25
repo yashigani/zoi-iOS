@@ -35,7 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3FA7F94F1981E329009FC664 /* zoi-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "zoi-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FA7F94F1981E329009FC664 /* zoi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zoi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FA7F9521981E329009FC664 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3FA7F9541981E329009FC664 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		3FA7F9561981E329009FC664 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -95,7 +95,7 @@
 		3FA7F9501981E329009FC664 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3FA7F94F1981E329009FC664 /* zoi-iOS.app */,
+				3FA7F94F1981E329009FC664 /* zoi.app */,
 				3FA7F9701981E329009FC664 /* zoi-iOSTests.xctest */,
 			);
 			name = Products;
@@ -173,7 +173,7 @@
 			);
 			name = "zoi-iOS";
 			productName = "zoi-iOS";
-			productReference = 3FA7F94F1981E329009FC664 /* zoi-iOS.app */;
+			productReference = 3FA7F94F1981E329009FC664 /* zoi.app */;
 			productType = "com.apple.product-type.application";
 		};
 		3FA7F96F1981E329009FC664 /* zoi-iOSTests */ = {
@@ -382,7 +382,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "zoi-iOS/zoi-iOS-Prefix.pch";
 				INFOPLIST_FILE = "zoi-iOS/zoi-iOS-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = zoi;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -395,7 +395,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "zoi-iOS/zoi-iOS-Prefix.pch";
 				INFOPLIST_FILE = "zoi-iOS/zoi-iOS-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = zoi;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -459,6 +459,7 @@
 				3FA7F9831981E329009FC664 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3FA7F9841981E329009FC664 /* Build configuration list for PBXNativeTarget "zoi-iOSTests" */ = {
 			isa = XCConfigurationList;
@@ -467,6 +468,7 @@
 				3FA7F9861981E329009FC664 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
